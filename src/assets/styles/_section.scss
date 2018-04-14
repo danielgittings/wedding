@@ -1,0 +1,23 @@
+section {
+  padding: 10rem 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &.section--white {
+    background-color: $color-white;
+  }
+
+  &.section--light-gray {
+    background-color: $color-light-gray;
+  }
+
+  .inner-narrow {
+    max-width: 550px;
+  }
+
+  .inner-wide {
+    max-width: 800px;
+  }
+}
