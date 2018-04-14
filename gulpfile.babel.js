@@ -108,4 +108,6 @@ export function watch() {
 
 const dev = gulp.series(clean, gulp.parallel(scripts, styles, markup, images), serve, watch);
 
+export const build = gulp.series(clean, gulp.parallel(scripts, styles, markup, images));
+
 export default dev;
