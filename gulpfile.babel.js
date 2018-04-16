@@ -61,7 +61,11 @@ function serve(done) {
 export const clean = () => del(['build']);
 
 export function scripts() {
-  return gulp.src(paths.scripts.src, { sourcemaps: true })
+  return gulp.src([
+    'src/assets/scripts/libs/polyfill.js',
+    'src/assets/scripts/libs/smoothscroll.min.js',
+    'src/assets/scripts/main.js'
+  ])
     .pipe(babel())
     .pipe(uglify())
     .pipe(concat('main.min.js'))
