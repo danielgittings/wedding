@@ -1,0 +1,19 @@
+.button {
+  padding: 1rem 2.5rem;
+  margin: 2rem auto 0;
+  background-color: #08c;
+  color: $color-white;
+  text-decoration: none;
+  border-radius: 3px;
+  transition: box-shadow .2s ease;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten(#08c, 5%);
+    //box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  &:active {
+    transform: scale(.97);
+  }
+}
