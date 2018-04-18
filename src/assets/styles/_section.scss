@@ -21,3 +21,7 @@ section {
     max-width: 800px;
   }
 }
+
+section:focus {
+  outline: none;
+}
