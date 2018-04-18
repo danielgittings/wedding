@@ -13,7 +13,7 @@
 <body>
 
   <header>
-    <nav class="main-nav">
+    <nav id="main-nav" class="main-nav">
       <ul>
         <li>
           <a data-target="#venue" href="#venue">Venue</a>
@@ -28,10 +28,14 @@
           <a data-target="#rsvp" href="#rsvp">RSVP</a>
         </li>
         <li>
+          <a data-target="#local-area" href="#local-area">Local area</a>
+        </li>
+        <li>
           <a data-target="#questions" href="#questions">Questions</a>
         </li>
       </ul>
     </nav>
+
 
     <div class="position-relative background-cover banner-image">
       <div style="position: absolute; top: 0; bottom: 0; right: 0; left: 0; background-color: rgba(255,255,255,.5);">
@@ -39,7 +43,9 @@
     </div>
   </header>
 
-  <section id="venue" class="section--light-gray">
+
+
+  <section id="venue" class="section--light-gray" tabindex="0">
     <div class="inner-narrow">
       <h2 class="text-center">The venue</h2>
       <span class="divider"></span>
@@ -48,10 +54,13 @@
       </p>
     </div>
 
+
+
     <div class="embed-responsive embed-responsive-21by9">
       <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.8540968094153!2d-0.29666853356449685!3d51.44247332962456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760c106c9e5b5f%3A0xbb1666e13117cb1!2sPembroke+Lodge!5e0!3m2!1sen!2suk!4v1519343041111"
         allowfullscreen></iframe>
     </div>
+
 
     <div class="inner-narrow">
       <p class="text-center">Head up the right-hand fork at the roundabout, and you’ll reach a large public car park. The Lodge is directly opposite.
@@ -61,7 +70,7 @@
     </div>
   </section>
 
-  <section id="gifts" class="section--white">
+  <section id="gifts" class="section--white" tabindex="0">
     <div class="inner-narrow">
       <h2 class="text-center">Gifts</h2>
       <span class="divider"></span>
@@ -74,10 +83,10 @@
         You can donate online through our <a href="https://uk.virginmoneygiving.com/Dan-and-Pippa-wedding">Virgin Money Giving page</a> or use the post box on the day itself.</p>
     </div>
 
-    <a class="button text-center;" href="https://uk.virginmoneygiving.com/Dan-and-Pippa-wedding">Donate via Virgin Money Giving</a>
+    <a class="button text-center;" href="https://uk.virginmoneygiving.com/Dan-and-Pippa-wedding">Donate</a>
   </section>
 
-  <section id="on-the-day" class="section--light-gray">
+  <section id="on-the-day" class="section--light-gray" tabindex="0">
     <div class="inner-narrow">
       <h2 class="text-center">On the day</h2>
       <span class="divider"></span>
@@ -98,7 +107,7 @@
     </div>
   </section>
 
-  <section id="rsvp" class="section--white">
+  <section id="rsvp" class="section--white" tabindex="0">
     <div class="inner-narrow">
       <h2 class="text-center">RSVP</h2>
       <span class="divider"></span>
@@ -113,7 +122,7 @@
        >Loading...</iframe> -->
   </section>
 
-  <section id="local-area" class="section--light-gray">
+  <section id="local-area" class="section--light-gray" tabindex="0">
     <div class="inner-narrow">
       <h2 class="text-center">Local area</h2>
       <span class="divider"></span>
@@ -133,7 +142,7 @@
     </div>
   </section>
 
-  <section id="questions" class="section--white">
+  <section id="questions" class="section--white" tabindex="0">
     <div class="inner-narrow">
       <h2 class="text-center">Questions</h2>
       <span class="divider"></span>
@@ -141,7 +150,7 @@
     </div>
   </section>
 
-  <footer>
+  <footer tabindex="0">
     <p class="text-center">
       Footer words
     </p>
