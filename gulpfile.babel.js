@@ -16,23 +16,23 @@ const server = browserSync.create();
 const paths = {
   styles: {
     src: 'src/assets/styles/**/*.scss',
-    dest: 'build/assets/styles/'
+    dest: 'build/assets/styles/',
   },
   scripts: {
     src: 'src/assets/scripts/**/*.js',
-    dest: 'build/assets/scripts/'
+    dest: 'build/assets/scripts/',
   },
   markup: {
     src: 'src/**/*.html',
-    dest: 'build'
+    dest: 'build',
   },
   images: {
     src: 'src/assets/img/**/*.{jpg, jpeg, png}',
-    dest: 'build/assets/img/'
-  }
+    dest: 'build/assets/img/',
+  },
 };
 
-const supported_browsers = [
+const supportedBrowsers = [
   'ie >= 10',
   'ie_mob >= 10',
   'ff >= 30',
@@ -41,7 +41,7 @@ const supported_browsers = [
   'opera >= 23',
   'ios >= 7',
   'android >= 4.4',
-  'bb >= 10'
+  'bb >= 10',
 ];
 
 function reload(done) {
@@ -52,8 +52,8 @@ function reload(done) {
 function serve(done) {
   server.init({
     server: {
-      baseDir: './build'
-    }
+      baseDir: './build',
+    },
   });
   done();
 }
@@ -65,7 +65,7 @@ export function scripts() {
     'src/assets/scripts/libs/polyfill.js',
     'src/assets/scripts/libs/find-poly.js',
     'src/assets/scripts/libs/smoothscroll.min.js',
-    'src/assets/scripts/main.js'
+    'src/assets/scripts/main.js',
   ])
     .pipe(babel())
     .pipe(uglify())
@@ -79,13 +79,13 @@ export function styles() {
     .pipe(sass())
     .pipe(cleanCSS())
     .pipe(autoprefixer({
-      browsers: supported_browsers
+      browsers: supportedBrowsers,
     }))
     .pipe(sourcemaps.write())
     // pass in options to the stream
     .pipe(rename({
       basename: 'main',
-      suffix: '.min'
+      suffix: '.min',
     }))
     .pipe(gulp.dest(paths.styles.dest));
 }
@@ -98,10 +98,10 @@ export function markup() {
 export function images() {
   return gulp.src(paths.images.src)
     .pipe(imagemin([
-      imagemin.jpegtran({progressive: true}),
-      imagemin.optipng({optimizationLevel: 5})
+      imagemin.jpegtran({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
     ]))
-    .pipe(gulp.dest(paths.images.dest))
+    .pipe(gulp.dest(paths.images.dest));
 }
 
 export function watch() {
