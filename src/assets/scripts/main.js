@@ -1,52 +1,51 @@
 const main = {
-   globals: {
+  globals: {
     sections: {},
     sectionsArray: [],
     navHeight: '',
     links: [],
-    i: 0
+    i: 0,
   },
 
   init() {
     main.globals.links = main.getLinks();
     main.addClickHandlers(main.globals.links);
 
-    window.addEventListener("load", function() {
+    window.addEventListener('load', () => {
       main.globals.navHeight = main.getNavHeight();
       main.getOffsets(main.globals.links);
       main.initialActive();
     });
 
-    window.addEventListener('resize', function(event){
+    window.addEventListener('resize', () => {
       main.getOffsets(main.globals.links);
     });
 
-    window.onscroll = function() {
+    window.onscroll = () => {
       main.findActive();
     };
   },
 
-  getLinks () {
-    return [...document.querySelectorAll(".main-nav ul li a")];
+  getLinks() {
+    return [...document.querySelectorAll('.main-nav ul li a')];
   },
 
   getNavHeight() {
-    return document.getElementById("main-nav").offsetHeight;
+    return document.getElementById('main-nav').offsetHeight;
   },
 
   addClickHandlers(links) {
     links.forEach(item =>
-      item.addEventListener("click", e => {
+      item.addEventListener('click', (e) => {
         e.preventDefault();
-        let target = item.dataset.target;
-        let targetSection = main.globals.sectionsArray.find(section => section.id === target);
+        const { target } = item.dataset;
+        const targetSection = main.globals.sectionsArray.find(section => section.id === target);
         window.scroll({
           top: targetSection.offset,
           left: 0,
-          behavior: "smooth"
+          behavior: 'smooth',
         });
-      })
-    );
+      }));
   },
 
   initialActive() {
@@ -54,32 +53,32 @@ const main = {
   },
 
   findActive() {
-    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
-    main.globals.sectionsArray.forEach(item => {
+    main.globals.sectionsArray.forEach((item) => {
       if (item.offset <= scrollPosition + 250) {
-        let actives = [...document.querySelectorAll('.active')];
+        const actives = [...document.querySelectorAll('.active')];
 
         if (actives) {
-          actives.forEach(item => {
-            item.classList.remove('active');
+          actives.forEach((active) => {
+            active.classList.remove('active');
           });
         }
-        document.querySelector('a[href*="' + item.id + '"]').setAttribute('class', 'active');
+        document.querySelector(`a[href*="${item.id}"]`).setAttribute('class', 'active');
       }
     });
   },
 
   // Get offsets of sections
-  getOffsets (items) {
+  getOffsets(items) {
     main.globals.sectionsArray = [];
-    items.forEach(item => {
+    items.forEach((item) => {
       main.globals.sectionsArray.push({
-        'id': item.dataset.target,
-        'offset': document.querySelector(item.dataset.target).offsetTop - main.globals.navHeight
+        id: item.dataset.target,
+        offset: document.querySelector(item.dataset.target).offsetTop - main.globals.navHeight,
       });
     });
-  }
+  },
 };
 
 main.init();
