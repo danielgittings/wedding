@@ -27,7 +27,8 @@ const paths = {
     dest: 'build',
   },
   images: {
-    src: 'src/assets/img/**/*.{jpg, jpeg, png}',
+    //src: 'src/assets/img/*.{jpg, png, svg, gif}',
+    src: 'src/assets/img/*',
     dest: 'build/assets/img/',
   },
 };
@@ -98,8 +99,10 @@ export function markup() {
 export function images() {
   return gulp.src(paths.images.src)
     .pipe(imagemin([
-      imagemin.jpegtran({ progressive: true }),
-      imagemin.optipng({ optimizationLevel: 5 }),
+    	imagemin.gifsicle({interlaced: true}),
+	imagemin.jpegtran({progressive: true}),
+	imagemin.optipng({optimizationLevel: 5}),
+	imagemin.svgo()
     ]))
     .pipe(gulp.dest(paths.images.dest));
 }

@@ -1,9 +1,17 @@
 section {
-  padding: 10rem 50px;
+  padding: 5rem 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media all and (min-width: $screen-lg) {
+    padding: 6rem 50px;
+  }
+
+  @media all and (min-width: $screen-xl) {
+    padding: 8rem 50px;
+  }
 
   &.section--white {
     background-color: $color-white;
