@@ -4,12 +4,16 @@ const main = {
     sectionsArray: [],
     navHeight: '',
     links: [],
+    toggle: '',
     i: 0,
   },
 
   init() {
     main.globals.links = main.getLinks();
+    main.globals.toggle = main.getToggle();
+
     main.addClickHandlers(main.globals.links);
+    main.addToggleHandlers(main.globals.toggle);
 
     window.addEventListener('load', () => {
       main.globals.navHeight = main.getNavHeight();
@@ -28,6 +32,21 @@ const main = {
 
   getLinks() {
     return [...document.querySelectorAll('.main-nav ul li a')];
+  },
+
+  getToggle() {
+    return document.getElementById('js-toggle');
+  },
+
+  addToggleHandlers(toggle) {
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      main.globals.navHeight = 0;
+      main.getOffsets(main.globals.links);
+      main.addClickHandlers(main.globals.links);
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('open');
+    });
   },
 
   getNavHeight() {

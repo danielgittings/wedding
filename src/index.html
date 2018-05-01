@@ -5,14 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dan ❤ Pippa</title>
+  <title>Dan &amp; Pippa</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="stylesheet" href="assets/styles/main.min.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Niconne" rel="stylesheet">
 </head>
 
 <body>
-
-  <header>
+  <header style="background-color: #fafafa;">
     <nav id="main-nav" class="main-nav">
       <ul>
         <li>
@@ -37,9 +40,22 @@
     </nav>
 
 
-    <div class="position-relative background-cover banner-image">
+    <div class="position-relative background-cover banner-image" style="z-index: 500;">
       <div style="position: absolute; top: 0; bottom: 0; right: 0; left: 0; background-color: rgba(255,255,255,.5);">
       </div>
+    </div>
+
+    <div style="z-index: 500; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;  background-color: white;  max-width: 800px;  margin: -100px auto 0; box-shadow: 0 10px 16px 0 rgba(0,0,0,.01),0 6px 20px 0 rgba(0,0,0,0.05) !important; padding: 3rem;" class="heart-box">
+
+      <h1 class="title animated fadeInUp font-fancy" style="font-weight: 100; color: #800020; animation-delay: 0; font-size: 6rem; margin-top:0; margin-bottom: 0;">
+        Dan &amp; Pippa
+      </h1>
+      <h2 class="animated fadeInUp subtitle is-size-2" style="font-family: 'Open Sans', sans-serif; animation-delay: .5s; margin-bottom: 0;">
+        November 3rd 2018
+      </h2>
+      <h2 class="animated fadeInUp subtitle is-size-2" style="animation-delay: .7s;">
+        Pembroke Lodge, Richmond
+      </h2>
     </div>
   </header>
 
@@ -47,7 +63,7 @@
 
   <section id="venue" class="section--light-gray" tabindex="0">
     <div class="inner-narrow">
-      <h2 class="text-center">The venue</h2>
+      <h2 class="text-center section-heading">The venue</h2>
       <span class="divider"></span>
       <p class="text-center">We are getting married in the Russell Suite of Pembroke Lodge, Richmond Park, Queen Street, Richmond TW10 5HX.</p>
       <p class="text-center">You’ll need to enter and exit the park via Richmond Gate, more details on the map below:
@@ -57,7 +73,7 @@
 
 
     <div class="embed-responsive embed-responsive-21by9">
-      <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.8540968094153!2d-0.29666853356449685!3d51.44247332962456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760c106c9e5b5f%3A0xbb1666e13117cb1!2sPembroke+Lodge!5e0!3m2!1sen!2suk!4v1519343041111"
+      <iframe title="google map of pembroke lodge" class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.8540968094153!2d-0.29666853356449685!3d51.44247332962456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760c106c9e5b5f%3A0xbb1666e13117cb1!2sPembroke+Lodge!5e0!3m2!1sen!2suk!4v1519343041111"
         allowfullscreen></iframe>
     </div>
 
@@ -72,7 +88,7 @@
 
   <section id="gifts" class="section--white" tabindex="0">
     <div class="inner-narrow">
-      <h2 class="text-center">Gifts</h2>
+      <h2 class="text-center section-heading">Gifts</h2>
       <span class="divider"></span>
 
       <p class="text-center">Thank you for thinking of giving us something to commemorate our big day!</p>
@@ -88,7 +104,7 @@
 
   <section id="on-the-day" class="section--light-gray" tabindex="0">
     <div class="inner-narrow">
-      <h2 class="text-center">On the day</h2>
+      <h2 class="text-center section-heading">On the day</h2>
       <span class="divider"></span>
         <p class="text-center">The dress code is smart, but not overly formal - we’d like suits and dresses, but hats aren’t necessary and colourful
           patterned socks are actively encouraged. </p>
@@ -109,7 +125,7 @@
 
   <section id="rsvp" class="section--white" tabindex="0">
     <div class="inner-narrow">
-      <h2 class="text-center">RSVP</h2>
+      <h2 class="text-center section-heading">RSVP</h2>
       <span class="divider"></span>
       <p>Please RSVP using the form below - this puts everyone’s responses into a spreadsheet for us and makes things a lot
         easier to organise!</p>
@@ -124,7 +140,7 @@
 
   <section id="local-area" class="section--light-gray" tabindex="0">
     <div class="inner-narrow">
-      <h2 class="text-center">Local area</h2>
+      <h2 class="text-center section-heading">Local area</h2>
       <span class="divider"></span>
       <p>There’s a list of Richmond hotels on Tripadvisor at this link. We’re staying at the Richmond Hill Hotel, but a lot
         of the local hotels (unsurprisingly) are expensive so you may prefer to look further afield.</p>
@@ -132,19 +148,15 @@
         of the night.</p>
 
       <p>We’ve been to the <a href="http://www.themarlboroughrichmond.co.uk/">Marlborough</a> and <a href="https://www.jacksonrye.com/brasserie/richmond/">Jackson &amp; Rye</a> before and would recommend both for food, if you’re looking for
-        that pre-wedding breakfast. Plus, the <a href="https://oleandsteen.co.uk/pages/our-bakeries">Ole &amp; Steen bakery</a> on the High Street is one of our favourite places if
-        you’re looking to grab a quick coffee pastry, sausage roll or sandwich.</p>
+        that pre-wedding breakfast. Plus, the <a href="https://oleandsteen.co.uk/pages/our-bakeries">Ole &amp; Steen bakery</a> on the High Street is one of our favourite places if you’re looking to grab a quick coffee pastry, sausage roll or sandwich.</p>
 
-      <p>Just a warning - Richmond Station and Richmond High Street are at the bottom of a large hill, and our venue is at the
-        top. It probably doesn’t look like a long walk on Google Maps, but please bear the hill in mind. Unfortunately the
-        buses don’t make it all the way up the hill, so an Uber or taxi is probably your best bet for getting up to the venue
-        in a relaxed way.</p>
+      <p>Just a warning - Richmond Station and Richmond High Street are at the bottom of a large hill, and our venue is at the top. It probably doesn’t look like a long walk on Google Maps, but please bear the hill in mind. Unfortunately the buses don’t make it all the way up the hill, so an Uber or taxi is probably your best bet for getting up to the venue in a relaxed way.</p>
     </div>
   </section>
 
   <section id="questions" class="section--white" tabindex="0">
     <div class="inner-narrow">
-      <h2 class="text-center">Questions</h2>
+      <h2 class="text-center section-heading">Questions</h2>
       <span class="divider"></span>
       <p>We hope we’ve covered everything you need to know above, but if you have any questions just <a href="mailto:&#100;&#097;&#110;&#103;&#105;&#116;&#116;&#105;&#110;&#103;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;,&#112;&#105;&#112;&#112;&#097;&#046;&#103;&#111;&#108;&#100;&#101;&#110;&#098;&#101;&#114;&#103;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">drop us an email</a>.</p>
     </div>
@@ -152,9 +164,89 @@
 
   <footer tabindex="0">
     <p class="text-center">
-      Footer words
+      <a style="text-decoration: none;" href="/assets/img/pl.jpg">🐱</a>
     </p>
   </footer>
+
+  <div id="js-toggle" class="toggle">
+    <p style="padding: 0; margin: 0;">hi</p>
+  </div>
+
+  <style>
+    .animated {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      transform: rotate(0.01deg);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 10%, 0);
+        transform: translate3d(0, 10%, 0);
+      }
+
+      to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .fadeInUp {
+      -webkit-animation-name: fadeInUp;
+      animation-name: fadeInUp;
+    }
+
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fadeIn {
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+    }
+
+    .font-fancy {
+      font-family: 'Niconne', cursive;
+    }
+
+    .heart-box {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .heart-box::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0%;
+      left: 0%;
+      z-index: -1;
+      background: url(assets/img/heart.svg) center center no-repeat;
+      opacity: .05;
+    }
+
+  </style>
 
   <script src="assets/scripts/main.min.js"></script>
 </body>

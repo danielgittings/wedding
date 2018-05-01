@@ -1,0 +1,19 @@
+.toggle {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  z-index: 3000;
+  cursor: pointer;
+
+  @media all and (min-width: $screen-md) {
+    display: none;
+  }
+}
