@@ -1,4 +1,14 @@
 .banner-image {
   height: 600px;
   background-image: url('/assets/img/test.jpg');
+  z-index: 500;
+
+  .inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(255,255,255,.5);
+  }
 }

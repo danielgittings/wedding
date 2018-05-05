@@ -23,6 +23,10 @@ section {
 
   .inner-narrow {
     max-width: 550px;
+
+    *:last-child {
+      padding-bottom: 0;
+    }
   }
 
   .inner-wide {
