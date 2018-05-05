@@ -6,6 +6,7 @@ const main = {
     links: [],
     toggle: '',
     i: 0,
+    bottom: false,
   },
 
   init() {
@@ -26,6 +27,7 @@ const main = {
     });
 
     window.onscroll = () => {
+      main.checkBottom();
       main.findActive();
     };
   },
@@ -43,9 +45,10 @@ const main = {
       e.preventDefault();
       main.globals.navHeight = 0;
       main.getOffsets(main.globals.links);
-      main.addClickHandlers(main.globals.links);
+      //main.addClickHandlers(main.globals.links);
       const nav = document.getElementById('main-nav');
       nav.classList.toggle('open');
+      toggle.classList.toggle('is-active');
     });
   },
 
@@ -71,11 +74,33 @@ const main = {
     main.findActive();
   },
 
+  checkBottom() {
+    // var d = document.documentElement;
+    // var offset = d.scrollTop + window.innerHeight;
+    // var height = d.offsetHeight;
+
+    // if (offset === height) {
+    //   main.globals.bottom = true;
+    // } else {
+    //   main.globals.bottom = false;
+    // }
+  },
+
   findActive() {
     const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
     main.globals.sectionsArray.forEach((item) => {
-      if (item.offset <= scrollPosition + 250) {
+      if (main.globals.bottom) {
+        const actives = [...document.querySelectorAll('.active')];
+
+        if (actives) {
+          actives.forEach((active) => {
+            active.classList.remove('active');
+          });
+        }
+
+        document.querySelector('a[href*="question"]').setAttribute('class', 'active');
+      } else if (item.offset <= scrollPosition + 250) {
         const actives = [...document.querySelectorAll('.active')];
 
         if (actives) {
@@ -84,6 +109,8 @@ const main = {
           });
         }
         document.querySelector(`a[href*="${item.id}"]`).setAttribute('class', 'active');
+      } else {
+
       }
     });
   },

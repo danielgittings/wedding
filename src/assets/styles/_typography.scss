@@ -20,7 +20,7 @@ ul {
 
 p {
   font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.8;
   text-align: center;
   padding-bottom: 1.5rem;
   margin: 0;
@@ -70,4 +70,8 @@ tr td {
       }
     }
   }
+}
+
+.font-fancy {
+  font-family: 'Niconne', cursive;
 }
