@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  flex-direction: column-reverse;
+  max-width: 600px;
+
+  @media all and (min-width: $screen-lg) {
+    flex-direction: row;
+    max-width: 1000px;
+  }
+
+  &.container--reverse {
+    @media all and (min-width: $screen-lg) {
+      flex-direction: row-reverse;
+    }
+
+    .col-text {
+      @media all and (min-width: $screen-lg) {
+        padding: 0 5rem 0 0;
+        width: 70%;
+      }
+    }
+  }
+
+  > .col-text {
+    padding: 0;
+    width: 100%;
+
+    @media all and (min-width: $screen-lg) {
+      padding: 0 0 0 5rem;
+      width: 60%;
+    }
+  }
+
+  > .col-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0 0;
+    width: 100%;
+
+    @media all and (min-width: $screen-lg) {
+      padding-top: 0;
+      align-items: flex-start;
+      width: 40%;
+    }
+
+    &.gifts {
+      display: flex;
+      flex-direction: row;
+
+      @media all and (min-width: $screen-lg) {
+        flex-direction: column;
+      }
+
+      > div {
+        width: calc(100% / 3);
+        padding: 1rem 2rem;
+        box-sizing: border-box;
+
+        @media all and (min-width: $screen-lg) {
+          width: 100%;
+          flex-direction: column;
+        }
+
+        img {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+
+    picture,
+    img {
+      max-width: 100%;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}

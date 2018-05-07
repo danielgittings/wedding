@@ -1,6 +1,6 @@
 .button {
   padding: 1rem 2.5rem;
-  margin: 3rem auto 0;
+  margin: 2rem auto 0;
   background-color: $color-blue;
   color: $color-white;
   text-decoration: none;
@@ -8,6 +8,7 @@
   transition: box-shadow .2s ease;
   text-align: center;
   font-size: 1.1rem;
+  display: inline-block;
 
   &:hover {
     cursor: pointer;
