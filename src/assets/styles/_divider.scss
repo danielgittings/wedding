@@ -2,6 +2,10 @@
   width: 5rem;
   display: block;
   margin: 1.5rem 0 2.5rem;
+
+  &.divider--center {
+    margin: 1.5rem auto 2.5rem;
+  }
 }
 
 .section--white {

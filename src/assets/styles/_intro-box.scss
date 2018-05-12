@@ -9,8 +9,12 @@
   max-width: 800px;
   margin: -100px auto 0;
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, .01), 0 6px 20px 0 rgba(0, 0, 0, .05) !important;
-  padding: 3rem;
+  padding: 2rem 1rem;
   overflow: hidden;
+
+  @media all and (min-width: $screen-md) {
+    padding: 3rem;
+  }
 
   &:before {
     content: '';
