@@ -7,8 +7,9 @@
   border-radius: 3px;
   transition: box-shadow .2s ease;
   text-align: center;
-  font-size: 1.1rem;
   display: inline-block;
+  text-shadow: 1px 1px rgba(0, 0, 0, .3);
+  font-size: 1.25rem;
 
   &:hover {
     cursor: pointer;
