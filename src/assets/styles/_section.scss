@@ -21,8 +21,27 @@ section {
     background-color: $color-light-gray;
   }
 
+  &.section--blue {
+    background-color: $color-blue;
+
+    h2,
+    p,
+    a {
+      color: $color-pale-blue;
+    }
+  }
+
   .inner-narrow {
     max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @media all and (min-width: $screen-sm) {
+      justify-content: center;
+      align-items: center;
+    }
 
     *:last-child {
       //padding-bottom: 0;
