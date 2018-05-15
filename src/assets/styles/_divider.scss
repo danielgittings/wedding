@@ -4,7 +4,9 @@
   margin: 1.5rem 0 2.5rem;
 
   &.divider--center {
-    margin: 1.5rem auto 2.5rem;
+    @media all and (min-width: $screen-sm) {
+      margin: 1.5rem auto 2.5rem;
+    }
   }
 }
 
@@ -17,5 +19,11 @@
 .section--light-gray {
   .divider {
     border-bottom: 3px solid #dddddd;
+  }
+}
+
+.section--blue {
+  .divider {
+    border-bottom: 3px solid $color-pale-blue;
   }
 }

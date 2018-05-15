@@ -1,22 +1,37 @@
 .button {
   padding: 1rem 2.5rem;
-  margin: 2rem auto 0;
+  margin: 2rem 0;
   background-color: $color-blue;
   color: $color-white;
   text-decoration: none;
   border-radius: 3px;
-  transition: box-shadow .2s ease;
   text-align: center;
-  display: inline-block;
-  text-shadow: 1px 1px rgba(0, 0, 0, .3);
+  display: inline;
+  text-shadow: 1px 1px rgba(0, 0, 0, .1);
   font-size: 1.25rem;
+  transition: all 250ms cubic-bezier(.02, .01, .47, 1);
+
+  &.button--center {
+    margin: 2rem auto 0;
+  }
+
+  &.button--important {
+    margin: 3.5rem 0 0;
+  }
 
   &:hover {
     cursor: pointer;
     background-color: lighten($color-blue, 5%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
   }
 
   &:active {
     transform: scale(.97);
   }
+}
+
+section.section--blue a.button {
+  background-color: $color-white;
+  color: $color-dark-gray;
+  text-shadow: none;
 }
