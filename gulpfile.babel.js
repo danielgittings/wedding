@@ -66,6 +66,7 @@ export function scripts() {
     'src/assets/scripts/libs/polyfill.js',
     'src/assets/scripts/libs/find-poly.js',
     'src/assets/scripts/libs/smoothscroll.min.js',
+    // 'src/assets/scripts/libs/anime.min.js',
     'src/assets/scripts/main.js',
   ])
     .pipe(babel())
