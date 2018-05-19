@@ -32,6 +32,10 @@ p {
   @media all and (min-width: $screen-sm) {
     text-align: center;
   }
+
+  &.text-center-md {
+    text-align: center;
+  }
 }
 
 a {

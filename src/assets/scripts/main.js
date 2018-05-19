@@ -10,26 +10,32 @@ const main = {
   },
 
   init() {
-    main.globals.links = main.getLinks();
+    // main.globals.links = main.getLinks();
     main.globals.toggle = main.getToggle();
 
-    main.addClickHandlers(main.globals.links);
+    // main.addClickHandlers(main.globals.links);
     main.addToggleHandlers(main.globals.toggle);
 
-    window.addEventListener('load', () => {
-      main.globals.navHeight = main.getNavHeight();
-      main.getOffsets(main.globals.links);
-      main.initialActive();
-    });
+    // window.addEventListener('load', () => {
+    //   main.globals.navHeight = main.getNavHeight();
+    //   main.getOffsets(main.globals.links);
+    //   main.initialActive();
+    // });
 
-    window.addEventListener('resize', () => {
-      main.getOffsets(main.globals.links);
-    });
+    // window.addEventListener('resize', () => {
+    //   main.getOffsets(main.globals.links);
+    // });
 
-    window.onscroll = () => {
-      main.checkBottom();
-      main.findActive();
-    };
+    // window.onscroll = () => {
+    //   main.checkBottom();
+    //   main.findActive();
+    // };
+
+    const menu = document.querySelector('#main-nav');
+
+    console.log(menu);
+
+    scrollSpy(menu, 400, 'easeInOutSine', 77, 300);
   },
 
   getLinks() {
@@ -45,7 +51,7 @@ const main = {
       e.preventDefault();
       main.globals.navHeight = 0;
       main.getOffsets(main.globals.links);
-      //main.addClickHandlers(main.globals.links);
+      // main.addClickHandlers(main.globals.links);
       const nav = document.getElementById('main-nav');
       nav.classList.toggle('open');
       toggle.classList.toggle('is-active');
@@ -75,15 +81,15 @@ const main = {
   },
 
   checkBottom() {
-    // var d = document.documentElement;
-    // var offset = d.scrollTop + window.innerHeight;
-    // var height = d.offsetHeight;
+    const d = document.documentElement;
+    const offset = d.scrollTop + window.innerHeight;
+    const height = d.offsetHeight;
 
-    // if (offset === height) {
-    //   main.globals.bottom = true;
-    // } else {
-    //   main.globals.bottom = false;
-    // }
+    if (offset === height) {
+      main.globals.bottom = true;
+    } else {
+      main.globals.bottom = false;
+    }
   },
 
   findActive() {
@@ -110,7 +116,6 @@ const main = {
         }
         document.querySelector(`a[href*="${item.id}"]`).setAttribute('class', 'active');
       } else {
-
       }
     });
   },
