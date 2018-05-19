@@ -66,6 +66,7 @@ export function scripts() {
     'src/assets/scripts/libs/polyfill.js',
     'src/assets/scripts/libs/find-poly.js',
     'src/assets/scripts/libs/smoothscroll.min.js',
+    // 'src/assets/scripts/libs/anime.min.js',
     'src/assets/scripts/main.js',
   ])
     .pipe(babel())
@@ -99,10 +100,10 @@ export function markup() {
 export function images() {
   return gulp.src(paths.images.src)
     .pipe(imagemin([
-    	imagemin.gifsicle({interlaced: true}),
-	imagemin.jpegtran({progressive: true}),
-	imagemin.optipng({optimizationLevel: 5}),
-	imagemin.svgo()
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.jpegtran({ progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.svgo(),
     ]))
     .pipe(gulp.dest(paths.images.dest));
 }
