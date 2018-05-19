@@ -23,7 +23,7 @@ const paths = {
     dest: 'build/assets/scripts/',
   },
   markup: {
-    src: 'src/**/*.html',
+    src: 'src/**/*.{html,ico}',
     dest: 'build',
   },
   images: {
@@ -106,6 +106,10 @@ export function images() {
       imagemin.svgo(),
     ]))
     .pipe(gulp.dest(paths.images.dest));
+}
+
+export function moveFavicon() {
+  return gulp.src('')
 }
 
 export function watch() {
