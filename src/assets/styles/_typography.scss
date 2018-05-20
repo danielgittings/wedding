@@ -1,5 +1,5 @@
 * {
-  font-family: 'Open sans';
+  font-family: 'Open sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 h2,
@@ -23,7 +23,7 @@ p {
   font-weight: 400;
   line-height: 1.8;
   padding-bottom: 0;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1.5rem;
 }
 
 .text-center {
@@ -58,32 +58,10 @@ tr td {
   padding: 20px;
 }
 
-.list-thing {
-  -webkit-padding-start: 0px;
-  padding: 0;
-
-  li {
-    padding: 20px;
-    background-color: white;
-    margin-bottom: 30px;
-    position: relative;
-    border: 1px solid #eee;
-
-    &:not(:last-of-type) {
-      &:after {
-        content: '';
-        width: 4px;
-        background-color: white;
-        height: 31px;
-        position: absolute;
-        bottom: -31px;
-        left: calc(50% - 2px);
-
-      }
-    }
-  }
+.font-fancy {
+  font-family: Niconne, cursive;
 }
 
-.font-fancy {
-  font-family: 'Niconne', cursive;
+.text-double {
+  font-size: 2rem;
 }
