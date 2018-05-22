@@ -29,6 +29,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    flex: 0 1 auto;
 
     > p {
       width: 100%;
@@ -47,6 +48,7 @@
     align-items: center;
     padding: 3rem 0 0;
     width: 100%;
+    flex: 0 1 auto;
 
     @media all and (min-width: $screen-lg) {
       padding-top: 0;
