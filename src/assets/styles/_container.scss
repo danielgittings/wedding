@@ -43,6 +43,10 @@
       width: 100%;
     }
 
+    > * {
+      flex-shrink: 0;
+    }
+
     @media all and (min-width: $screen-lg) {
       padding: 0 0 0 5rem;
       width: 60%;
@@ -58,6 +62,10 @@
     width: 100%;
     flex: 0 1 auto;
     height: 100%;
+
+    > * {
+      flex-shrink: 0;
+    }
 
     @media all and (min-width: $screen-lg) {
       padding-top: 0;
