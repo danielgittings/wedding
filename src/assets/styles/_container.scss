@@ -11,13 +11,20 @@
 
   &.container--reverse {
     @media all and (min-width: $screen-lg) {
-      flex-direction: row-reverse;
+      //flex-direction: row-reverse;
+    }
+
+    .col-image {
+      @media all and (min-width: $screen-lg) {
+        order: 2;
+      }
     }
 
     .col-text {
       @media all and (min-width: $screen-lg) {
         padding: 0 5rem 0 0;
-        width: 70%;
+        width: 60%;
+        order: 1;
       }
     }
   }
@@ -30,6 +37,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex: 0 1 auto;
+    height: 100%;
 
     > p {
       width: 100%;
@@ -49,6 +57,7 @@
     padding: 3rem 0 0;
     width: 100%;
     flex: 0 1 auto;
+    height: 100%;
 
     @media all and (min-width: $screen-lg) {
       padding-top: 0;
@@ -62,6 +71,7 @@
       flex-direction: row;
       justify-content: center;
       align-items: center;
+      flex: 0 1 auto;
 
       @media all and (min-width: $screen-sm) {
         flex-direction: row;
