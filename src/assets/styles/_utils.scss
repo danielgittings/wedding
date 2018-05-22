@@ -10,3 +10,8 @@
 a.no-underline {
   text-decoration: none;
 }
+
+* {
+  box-sizing: border-box;
+  flex: 0 1 auto;
+}
