@@ -17,6 +17,7 @@
 
   > * {
     flex-shrink: 0;
+    flex-basis: auto;
   }
 
   @media all and (min-width: $screen-md) {
@@ -40,6 +41,7 @@
 
   > * {
     flex-shrink: 0;
+    flex-basis: auto;
   }
 
   &:focus {

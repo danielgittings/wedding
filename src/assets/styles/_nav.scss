@@ -13,6 +13,7 @@ nav {
 
   > * {
     flex-shrink: 0;
+    flex-basis: auto;
   }
 
   &.open {
@@ -66,6 +67,7 @@ nav {
       align-items: center;
       width: 100%;
       flex-shrink: 0;
+      flex-basis: auto;
 
       @media screen and (min-width: $screen-md) {
         width: auto;
