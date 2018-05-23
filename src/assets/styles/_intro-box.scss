@@ -12,6 +12,10 @@
   padding: 2rem 1rem;
   overflow: hidden;
 
+  > * {
+    flex-shrink: 0;
+  }
+
   @media all and (min-width: $screen-md) {
     padding: 3rem;
   }

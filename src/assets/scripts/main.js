@@ -2,7 +2,7 @@ const main = {
   globals: {
     links: [],
     toggle: '',
-    timeline: '',
+    timeline: ''
   },
 
   init() {
@@ -14,24 +14,23 @@ const main = {
       if (!mq.matches) {
         main.globals.timeline = anime.timeline({
           targets: '#main-nav',
-          translateX: ['100%', '15%'],
+          translateX: ['110%', '15%'],
           loop: false,
           direction: 'reverse',
           autoplay: false,
           easing: 'easeOutBack',
           duration: 300,
           elasticity: 100,
-          delay: 0,
+          delay: 0
         });
 
-        main.globals.timeline
-          .add({
-            targets: '#main-nav ul li a',
-            translateX: ['50%', 0],
-            loop: false,
-            delay: (el, i) => i * 40,
-            duration: 300,
-          });
+        main.globals.timeline.add({
+          targets: '#main-nav ul li a',
+          translateX: ['50%', 0],
+          loop: false,
+          delay: (el, i) => i * 40,
+          duration: 300
+        });
 
         main.globals.toggle = document.getElementById('js-toggle');
 
@@ -43,7 +42,7 @@ const main = {
 
         const links = [...document.querySelectorAll('#main-nav ul li a')];
 
-        links.forEach((link) => {
+        links.forEach(link => {
           link.addEventListener('click', () => {
             main.globals.timeline.play();
             main.globals.timeline.reverse();
@@ -61,7 +60,7 @@ const main = {
       mq.addListener(WidthChange);
       WidthChange(mq);
     }
-  },
+  }
 };
 
 main.init();
