@@ -1,9 +1,10 @@
 section {
   padding: 5rem 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
+  margin: 0 auto;
 
   @media all and (min-width: $screen-lg) {
     padding: 6rem 50px;
@@ -33,14 +34,21 @@ section {
 
   .inner-narrow {
     max-width: 550px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: flex-start;
+    // align-items: flex-start;
+    margin: 0 auto;
 
     @media all and (min-width: $screen-sm) {
-      justify-content: center;
-      align-items: center;
+      // justify-content: center;
+      // align-items: center;
+    }
+
+    .button {
+      @media all and (min-width: $screen-sm) {
+        margin: 0 auto;
+      }
     }
 
     > p {

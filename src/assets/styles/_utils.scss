@@ -14,3 +14,11 @@ a.no-underline {
 * {
   box-sizing: border-box;
 }
+
+.d-flex {
+  display: flex;
+
+  > * {
+    flex-shrink: 0;
+  }
+}

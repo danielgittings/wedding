@@ -16,32 +16,32 @@ const server = browserSync.create();
 const paths = {
   styles: {
     src: 'src/assets/styles/**/*.scss',
-    dest: 'build/assets/styles/',
+    dest: 'build/assets/styles/'
   },
   scripts: {
     src: 'src/assets/scripts/**/*.js',
-    dest: 'build/assets/scripts/',
+    dest: 'build/assets/scripts/'
   },
   markup: {
     src: 'src/**/*.{html,ico}',
-    dest: 'build',
+    dest: 'build'
   },
   images: {
     src: 'src/assets/img/*',
-    dest: 'build/assets/img/',
-  },
+    dest: 'build/assets/img/'
+  }
 };
 
 const supportedBrowsers = [
   'ie >= 10',
   'ie_mob >= 10',
-  'ff >= 30',
-  'chrome >= 34',
+  'ff >= 27',
+  'chrome >= 25',
   'safari >= 7',
   'opera >= 23',
   'ios >= 7',
   'android >= 4.4',
-  'bb >= 10',
+  'bb >= 10'
 ];
 
 function reload(done) {
@@ -52,8 +52,8 @@ function reload(done) {
 function serve(done) {
   server.init({
     server: {
-      baseDir: './build',
-    },
+      baseDir: './build'
+    }
   });
   done();
 }
@@ -61,13 +61,14 @@ function serve(done) {
 export const clean = () => del(['build']);
 
 export function scripts() {
-  return gulp.src([
-    'src/assets/scripts/libs/polyfill.js',
-    'src/assets/scripts/libs/find-poly.js',
-    'src/assets/scripts/libs/smoothscroll.min.js',
-    // 'src/assets/scripts/libs/anime.min.js',
-    'src/assets/scripts/main.js',
-  ])
+  return gulp
+    .src([
+      'src/assets/scripts/libs/polyfill.js',
+      'src/assets/scripts/libs/find-poly.js',
+      'src/assets/scripts/libs/smoothscroll.min.js',
+      // 'src/assets/scripts/libs/anime.min.js',
+      'src/assets/scripts/main.js'
+    ])
     .pipe(babel())
     .pipe(uglify())
     .pipe(concat('main.min.js'))
@@ -75,35 +76,44 @@ export function scripts() {
 }
 
 export function styles() {
-  return gulp.src(paths.styles.src)
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(cleanCSS())
-    .pipe(autoprefixer({
-      browsers: supportedBrowsers,
-    }))
-    .pipe(sourcemaps.write())
-    // pass in options to the stream
-    .pipe(rename({
-      basename: 'main',
-      suffix: '.min',
-    }))
-    .pipe(gulp.dest(paths.styles.dest));
+  return (
+    gulp
+      .src(paths.styles.src)
+      .pipe(sourcemaps.init())
+      .pipe(sass())
+      .pipe(cleanCSS())
+      .pipe(
+        autoprefixer({
+          browsers: supportedBrowsers
+        })
+      )
+      .pipe(sourcemaps.write())
+      // pass in options to the stream
+      .pipe(
+        rename({
+          basename: 'main',
+          suffix: '.min'
+        })
+      )
+      .pipe(gulp.dest(paths.styles.dest))
+  );
 }
 
 export function markup() {
-  return gulp.src(paths.markup.src)
-    .pipe(gulp.dest(paths.markup.dest));
+  return gulp.src(paths.markup.src).pipe(gulp.dest(paths.markup.dest));
 }
 
 export function images() {
-  return gulp.src(paths.images.src)
-    .pipe(imagemin([
-      imagemin.gifsicle({ interlaced: true }),
-      imagemin.jpegtran({ progressive: true }),
-      imagemin.optipng({ optimizationLevel: 5 }),
-      imagemin.svgo(),
-    ]))
+  return gulp
+    .src(paths.images.src)
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo()
+      ])
+    )
     .pipe(gulp.dest(paths.images.dest));
 }
 
