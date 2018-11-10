@@ -1,9 +1,9 @@
 {
-  "name": "starter-kit",
+  "name": "wedding-site",
   "version": "1.0.0",
-  "description": "A starter kit for static sites with some useful stuff configured.",
+  "description": "A wedding site for Daniel Gittings.",
   "main": "index.js",
-  "author": "DGittings <d.gittings@surrey.ac.uk>",
+  "author": "danielgittings <d.gittings@surrey.ac.uk>",
   "license": "MIT",
   "devDependencies": {
     "babel-preset-env": "^1.6.1",
