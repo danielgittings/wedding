@@ -5,9 +5,24 @@
   "main": "index.js",
   "author": "danielgittings <d.gittings@surrey.ac.uk>",
   "license": "MIT",
+  "scripts": {
+    "build": "gulp build"
+  },
+  "browserslist": [
+    "ie >= 10",
+    "ie_mob >= 10",
+    "ff >= 27",
+    "chrome >= 25",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4.4",
+    "bb >= 10"
+  ],
   "devDependencies": {
-    "babel-preset-env": "^1.6.1",
-    "babel-register": "^6.26.0",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
     "browser-sync": "^2.23.6",
     "del": "^5.0.0",
     "eslint": "^4.19.1",
